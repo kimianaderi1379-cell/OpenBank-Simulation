@@ -1,0 +1,140 @@
+
+.support-container {
+  padding: 40px;
+  color: #fff;
+  text-align: center;
+}
+
+
+.support-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.support-box {
+  background: #fff;
+  color: #000;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.support-textarea {
+  width: 100%;
+  height: 150px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: none;
+  font-size: 16px;
+  line-height: 1.6;
+  direction: rtl;
+}
+
+
+.support-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-submit {
+  background: #6f2cff;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.btn-submit:hover {
+  background: #5a23c8;
+}
+
+
+.btn-cancel {
+  background: #ccc;
+  color: #333;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.btn-cancel:hover {
+  background: #b5b5b5;
+}
+
+.alert-success {
+  margin-top: 20px;
+  background: #4caf50;
+  padding: 12px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+.support-links {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.support-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.support-links a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+
+  .support-container {
+    padding: 20px;
+  }
+
+  .support-box {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .support-title {
+    font-size: 26px;
+  }
+
+  .support-textarea {
+    height: 120px;
+    font-size: 14px;
+  }
+
+  .support-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-submit,
+  .btn-cancel {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 0;
+  }
+
+  .support-links {
+    font-size: 16px;
+    gap: 10px;
+    margin-top: 25px;
+  }
+}
