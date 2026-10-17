@@ -2,10 +2,9 @@ import { NextResponse } from "next/server";
 
 export async function GET(
   req: Request,
-  { params }: { params: { accountId: string } }
+  { params }: { params: Promise<{ accountId: string }> }
 ) {
-  const { accountId } = params;
-
+  const { accountId } = await params;
   return NextResponse.json({
     accountId,
     accountType: "checking",
