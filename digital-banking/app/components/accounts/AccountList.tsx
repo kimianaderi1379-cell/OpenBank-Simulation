@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import type { Account } from "../../accounts/page";
+import type { Account } from "@/app/types";
 
 interface Props {
   accounts: Account[];
