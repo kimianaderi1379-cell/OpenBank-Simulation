@@ -1,7 +1,4 @@
-
-
 export type AccountStatus = "active" | "blocked" | "closed";
-
 export type TransactionType = "deposit" | "withdrawal" | "transfer";
 
 export interface Transaction {
@@ -10,6 +7,9 @@ export interface Transaction {
   type: TransactionType;
   amount: number;
   description: string;
+  from?: string;
+  to?: string;
+  status?: "success" | "pending" | "error";
 }
 
 export interface Account {
