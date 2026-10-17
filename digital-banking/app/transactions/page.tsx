@@ -40,15 +40,16 @@ export default function TransactionsPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const newTrx: Transaction = {
-      id: Date.now().toString(),
-      from: formData.from,
-      to: formData.type === "withdraw" ? "" : formData.to,
-      amount: Number(formData.amount),
-      type: formData.type,
-      status: "success",
-      date: new Date().toLocaleDateString("fa-IR"),
-    };
+    const newTrx = {
+  id: Date.now().toString(),
+  date: new Date().toLocaleDateString("fa-IR"),
+  type: (formData.type === "withdraw" ? "withdrawal" : formData.type) as "deposit" | "withdrawal" | "transfer",
+  amount: Number(formData.amount),
+  description: `${formData.type} از ${formData.from} به ${formData.to || "-"}`,
+  from: formData.from,
+  to: formData.type === "withdraw" ? "" : formData.to,
+  status: "success" as const,
+};
 
     addTransaction(newTrx);
 
