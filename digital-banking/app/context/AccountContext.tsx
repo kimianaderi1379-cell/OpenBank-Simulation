@@ -16,7 +16,7 @@ const AccountContext = createContext<ContextType | null>(null);
 const initialAccounts: Account[] = [
   { id: "1234567890", name: "حساب جاری اصلی", balance: 50000000, type: "checking" },
   { id: "9876543210", name: "حساب پس‌انداز", balance: 120000000, type: "savings" },
-] as any; 
+] as any;
 
 const initialTransactions: Transaction[] = [
   {
@@ -46,6 +46,7 @@ const initialTransactions: Transaction[] = [
     status: "success",
     date: "1403/07/25",
   },
+
 ] as any;
 
 export const AccountProvider = ({ children }: { children: React.ReactNode }) => {
@@ -53,11 +54,11 @@ export const AccountProvider = ({ children }: { children: React.ReactNode }) => 
   const [accounts, setAccounts] = useState<Account[]>(initialAccounts);
   const [transactions, setTransactions] = useState<Transaction[]>(initialTransactions);
 
+  
   useEffect(() => {
     const savedAccounts = localStorage.getItem("accounts");
     const savedTransactions = localStorage.getItem("transactions");
 
-    
     if (savedAccounts && JSON.parse(savedAccounts).length > 0) {
       setAccounts(JSON.parse(savedAccounts));
     }
@@ -66,8 +67,8 @@ export const AccountProvider = ({ children }: { children: React.ReactNode }) => 
     }
   }, []);
 
+  
   useEffect(() => {
-
     if (accounts.length > 0) {
       localStorage.setItem("accounts", JSON.stringify(accounts));
     }
